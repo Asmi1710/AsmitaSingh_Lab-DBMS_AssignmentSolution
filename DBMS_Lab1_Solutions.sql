@@ -191,7 +191,11 @@ group by cus_gender;
 # It uses "where" clause to place conditions of matching customer ID between cutomer and order tables, pricing ID between supplier_pricing and order tables and 
 # matching product ID between product and supplier_pricing tables.
  
-select cus.CUS_NAME, ord.ORD_ID, ord.ORD_DATE, pr.PRO_ID, pr.PRO_NAME from customer as cus, `order` as ord, product as pr, Supplier_pricing as sp where cus.cus_id=2 and ord.CUS_ID=cus.CUS_ID and ord.PRICING_ID=sp.PRICING_ID and pr.PRO_ID=sp.PRO_ID;
+select cus.CUS_NAME, ord.ORD_ID, ord.ORD_DATE, pr.PRO_ID, pr.PRO_NAME from customer as cus, `order` as ord, product as pr, Supplier_pricing as sp 
+where cus.cus_id=2 and 
+ord.CUS_ID=cus.CUS_ID and 
+ord.PRICING_ID=sp.PRICING_ID and 
+pr.PRO_ID=sp.PRO_ID;
 
 
 
