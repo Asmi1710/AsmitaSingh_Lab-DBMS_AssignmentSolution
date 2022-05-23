@@ -216,6 +216,9 @@ on sup.supp_id = sp.supp_id;
 
 
 # Q6-> Find the least expensive product from each category and print the table with category id, name, product name and price of the product
+# It displays Category ID, category name, Product ID and product name and minimum price using category, product, supplier_pricing tables
+# it uses inner join and min aggregate function
+
 
 select cat.CAT_ID, CAT_NAME, PRO_ID, PRO_NAME, min(MIN_PRICE) from category as cat
 inner join
